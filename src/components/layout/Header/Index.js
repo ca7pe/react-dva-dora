@@ -1,13 +1,17 @@
 import React from 'react';
+
 import Menu from 'antd/lib/menu';
+import 'antd/lib/menu/style/css';
+
 import Icon from 'antd/lib/icon';
+import 'antd/lib/icon/style/css';
 
 import styles from './Index.css';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
-function Header(props) {
+function Index(props) {
 	function handleClick(e) {
 	    console.log('click ', e);
 	};
@@ -38,4 +42,4 @@ function Header(props) {
     );
 }
 
-export default Header;
+export default Index;

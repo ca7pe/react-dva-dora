@@ -7,6 +7,7 @@ module.exports = function(webpackConfig, env) {
     libraryName: 'antd',
     style: 'css'  // if true, use less
   }]);
+  
   // Support hmr
   if (env === 'development') {
     webpackConfig.devtool = '#eval';
