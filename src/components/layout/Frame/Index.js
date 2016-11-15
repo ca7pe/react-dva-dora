@@ -15,7 +15,7 @@ import Main from '../Main';
 import SideBar from '../SideBar';
 import Bread from '../Bread';
 
-import styles from './Index.css';
+import styles from './Index.less';
 
 function Index(props) {
 	const collapse = true;
