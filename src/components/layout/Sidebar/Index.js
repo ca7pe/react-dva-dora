@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'dva';
 
 import Menu from 'antd/lib/menu';
 import 'antd/lib/menu/style/css';
@@ -12,25 +13,43 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
 function Index(props) {
+    const { sideBarList } = props;
+
+    const MenuList = sideBarList.map(function(sideBarItem){
+      let SubMenuList = '';
+      if (sideBarItem.sub && sideBarItem.sub.length > 0) {
+        SubMenuList = sideBarItem.sub.map((item) =>
+          (
+            <Menu.Item key={item.key}>{item.name}</Menu.Item>
+          )
+        );
+      }
+      
+      return (
+        <SubMenu key={sideBarItem.key} title={<span><Icon type="user" />{sideBarItem.name}</span>}>
+            {SubMenuList}
+        </SubMenu>
+      );
+    });
+
   	return (
-	  	<Menu mode="inline" theme="dark" defaultSelectedKeys={['user']}>
-        <Menu.Item key="user">
-          <Icon type="user" /><span className="nav-text">导航一</span>
-        </Menu.Item>
-        <Menu.Item key="setting">
-          <Icon type="setting" /><span className="nav-text">导航二</span>
-        </Menu.Item>
-        <Menu.Item key="laptop">
-          <Icon type="laptop" /><span className="nav-text">导航三</span>
-        </Menu.Item>
-        <Menu.Item key="notification">
-          <Icon type="notification" /><span className="nav-text">导航四</span>
-        </Menu.Item>
-        <Menu.Item key="folder">
-          <Icon type="folder" /><span className="nav-text">导航五</span>
-        </Menu.Item>
+	  	<Menu mode="inline" theme="dark"
+          defaultSelectedKeys={['3']} defaultOpenKeys={['2']}>
+          {MenuList}
       </Menu>
     );
 }
 
-export default Index;
+function mapStateToProps(state) {
+  return state.frame;
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onCollapseChange(){
+      dispatch({type: 'frame/collapse'});
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index);

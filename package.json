@@ -7,6 +7,7 @@
     "antd": "^2.4.2",
     "dva": "^1.1.0",
     "history": "^4.4.0",
+    "qs": "^6.3.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "site": "^2.21.0"
@@ -15,6 +16,7 @@
     "@kadira/storybook": "^2.21.0",
     "atool-build": "^0.9.0",
     "atool-test-mocha": "^0.1.5",
+    "babel-core": "^6.18.2",
     "babel-plugin-dev-expression": "^0.2.1",
     "babel-plugin-dva-hmr": "^0.2.0",
     "babel-plugin-import": "^1.0.1",

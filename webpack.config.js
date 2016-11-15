@@ -1,7 +1,6 @@
 const webpack = require('atool-build/lib/webpack');
 
 module.exports = function(webpackConfig, env) {
-  webpackConfig.babel.babelrc = false;
   webpackConfig.babel.plugins.push('transform-runtime');
   webpackConfig.babel.plugins.push(['import', {
     libraryName: 'antd',

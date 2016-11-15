@@ -9,7 +9,9 @@ const app = dva();
 //app.use({});
 
 // 3. Model
-//app.model(require('./models/example'));
+app.model(require('./models/frame'));
+
+app.model(require("./models/grid"));
 
 // 4. Router
 app.router(require('./router'));

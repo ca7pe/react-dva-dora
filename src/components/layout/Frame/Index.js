@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'dva';
 
 import Row from 'antd/lib/row';
 import 'antd/lib/row/style/css';
@@ -18,10 +19,7 @@ import Bread from '../Bread';
 import styles from './Index.less';
 
 function Index(props) {
-	const collapse = true;
-	function onCollapseChange(e) {
-		return false;
-	}
+	const { collapse, onCollapseChange } = props;
     return (
     	<div className={collapse ? "ant-layout-aside ant-layout-aside-collapse" : "ant-layout-aside"}>
 	        <aside className="ant-layout-sider">
@@ -53,4 +51,16 @@ function Index(props) {
     );
 }
 
-export default Index;
+function mapStateToProps(state) {
+  return state.frame;
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onCollapseChange(){
+      dispatch({type: 'frame/collapse'});
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index);
