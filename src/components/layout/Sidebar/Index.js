@@ -16,20 +16,23 @@ function Index(props) {
     const { sideBarList } = props;
 
     const MenuList = sideBarList.map(function(sideBarItem){
-      let SubMenuList = '';
       if (sideBarItem.sub && sideBarItem.sub.length > 0) {
+        let SubMenuList = '';
         SubMenuList = sideBarItem.sub.map((item) =>
           (
             <Menu.Item key={item.key}>{item.name}</Menu.Item>
           )
         );
+        return (
+          <SubMenu key={sideBarItem.key} title={<span><Icon type="user" />{sideBarItem.name}</span>}>
+              {SubMenuList}
+          </SubMenu>
+        );
+      }else{
+        return(
+          <Menu.Item key={sideBarItem.key}>{sideBarItem.name}</Menu.Item>
+        )
       }
-      
-      return (
-        <SubMenu key={sideBarItem.key} title={<span><Icon type="user" />{sideBarItem.name}</span>}>
-            {SubMenuList}
-        </SubMenu>
-      );
     });
 
   	return (
