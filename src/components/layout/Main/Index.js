@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Index.css';
+import styles from './Index.less';
 
 function Index(props) {
   return (

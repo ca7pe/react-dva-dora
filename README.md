@@ -26,10 +26,17 @@
 
 ## 技术选型
 ##### 1. FrontEnd
-  > - 增强：[dva(react)](https://github.com/dvajs/dva) + [dora(webpack)](http://ant-tool.github.io/atool-build.html) + [ES6(ES5)](http://es6.ruanyifeng.com/)
+  > - 增强：[dva](https://github.com/dvajs/dva)(react) + [dora(webpack)](http://ant-tool.github.io/atool-build.html) + [ES6(ES5)](http://es6.ruanyifeng.com/)
   > - 优化：[CSS Module](https://zhuanlan.zhihu.com/p/20495964?columnSlug=purerender) + [Mock.js](https://github.com/dora-js/dora-plugin-proxy)
   > - 美化：[antDesign](https://ant.design)
   > - 辅助：[redux Devtool](https://chrome.google.com/webstore/category/extensions) + [react DevTool](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) + [Living Style Guide](https://getstorybook.io/)
+
+dva组成：
+
+- views: [react](https://github.com/facebook/react)
+- models: [redux](https://github.com/reactjs/redux), [react-redux](https://github.com/reactjs/react-redux), [redux-saga](https://github.com/yelouafi/redux-saga)
+- router: [react-router](https://github.com/reactjs/react-router)
+- http: [whatwg-fetch](https://github.com/github/fetch)
 
 ##### 2. BackEnd
   > - 后端架构：JAVA
@@ -71,10 +78,11 @@
 ## TodoList 
 > *重要 Important* - *紧急 Urgent*
 ##### I.U
-1. [x] 如何在启动时发请求
-1. [x] 菜单和面包屑联动
+1. [x] 菜单和面包屑联动、路由
 1. [x] webpack配置
-1. [x] ajax请求转发问题：主域名一致、cookie、登录态
+1. [√] ajax请求转发问题：主域名一致、cookie、登录态
+1. [√] 如何在启动时发请求
+
 
 ##### I.nU
 1. [x] webpack文件引用加版本号
@@ -89,7 +97,7 @@
 
 
 ## 待研究
-1.https://segmentfault.com/q/1010000000364871
+1. [chrome://net-internals](https://segmentfault.com/q/1010000000364871)
 
 ## 问题记录
 1. 只能有一个根节点

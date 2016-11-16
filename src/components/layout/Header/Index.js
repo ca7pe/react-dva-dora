@@ -6,7 +6,7 @@ import 'antd/lib/menu/style/css';
 import Icon from 'antd/lib/icon';
 import 'antd/lib/icon/style/css';
 
-import styles from './Index.css';
+import styles from './Index.less';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
