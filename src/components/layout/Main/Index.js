@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Index.less';
 
+import DataGrid from '../../widgets/DataGrid';
+
 function Index(props) {
-  return (
-    <div className={styles.normal}>
-      Component: 'Index'
-    </div>
-  );
+	  return (
+	  	<DataGrid />
+	  );
 }
 
 export default Index;

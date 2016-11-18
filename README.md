@@ -77,17 +77,21 @@ dva组成：
 
 ## TodoList 
 > *重要 Important* - *紧急 Urgent*
+
 ##### I.U
-1. [x] 菜单和面包屑联动、路由
-1. [x] webpack配置
+1. [x] 完成普通dataGrid
+1. [√] 动态路由、路由去掉hash
 1. [√] ajax请求转发问题：主域名一致、cookie、登录态
 1. [√] 如何在启动时发请求
-
+1. [√] 菜单和面包屑联动
 
 ##### I.nU
+1. [x] 自有命令行生成新页面套装（路由、菜单、dataGrid）
+1. [x] webpack普通配置
 1. [x] webpack文件引用加版本号
 1. [x] 调试服务器文件发布在哪里？
 1. [x] build之后的dist目录如何在生产环境配置？
+1. [x] 测试用例
 
 ##### nI.U
 1. [x] 无
@@ -98,6 +102,11 @@ dva组成：
 
 ## 待研究
 1. [chrome://net-internals](https://segmentfault.com/q/1010000000364871)
+1. [MVC，MVP 和 MVVM 的图示 - 阮一峰的网络日志 ](http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html)
+1. React Router 使用教程 - 阮一峰的网络日志
+http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu
+1. Popping Out of Hidden Overflow | CSS-Tricks
+https://css-tricks.com/popping-hidden-overflow/
 
 ## 问题记录
 1. 只能有一个根节点
@@ -106,6 +115,7 @@ dva组成：
 1. :global -> less
 1. two children with the same key -> 双引号
 1. fetch默认不带cookie、ip+端口号转发 -> {credentials: 'include'}
+1. iterator key不能重复
 
 ##### 相关链接
 - [Windows下使用Beyond Compare作为git的比对与合并工具 - Tek_Eternal - 开源中国社区](https://my.oschina.net/u/1010578/blog/348731)
@@ -193,3 +203,5 @@ http://deerchao.net/tutorials/regex/regex-1.htm
 ## 思考
 
 1. 你想到的别人说不定早就想到了，而且已经实现了，问题是你找不找得到！
+1. 真正学会 React 是一个漫长的过程。你会发现，它不是一个库，也不是一个框架，而是一个庞大的体系。想要发挥它的威力，整个技术栈都要配合它改造。你要学习一整套解决方案，从后端到前端，都是全新的做法。举例来说，React 不使用 HTML，而使用 JSX 。它打算抛弃 DOM，要求开发者不要使用任何 DOM 方法。它甚至还抛弃了 SQL ，自己发明了一套查询语言 GraphQL 。当然，这些你都可以不用，React 照样运行，但是就发挥不出它的最大威力。
+这样说吧，你只要用了 React，就会发现合理的选择就是，采用它的整个技术栈。

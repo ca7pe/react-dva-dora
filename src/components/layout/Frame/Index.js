@@ -31,16 +31,14 @@ function Index(props) {
 	        </aside>
 	        <div className="ant-layout-main">
 	          <div className="ant-layout-header">
-	          	<Header />
-	          </div>
+				{/*<Header />*/}
+		      </div>
 	          <div className="ant-layout-breadcrumb">
 	            <Bread />
 	          </div>
 	          <div className="ant-layout-container">
 	            <div className="ant-layout-content">
-	              <div style={{ height: 220 }}>
-	                <Main />
-	              </div>
+	              <Main />
 	            </div>
 	          </div>
 	          <div className="ant-layout-footer">

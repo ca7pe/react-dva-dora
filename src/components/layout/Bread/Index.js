@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'dva/router';
+import { connect } from 'dva';
 
 import styles from './Index.less';
 
@@ -7,12 +8,20 @@ import Breadcrumb from 'antd/lib/breadcrumb';
 import 'antd/lib/breadcrumb/style/css';
 
 function Index(props) {
-  return (
-    <Breadcrumb>
-      <Breadcrumb.Item><Link to="/">首页</Link></Breadcrumb.Item>
-      <Breadcrumb.Item>某应用</Breadcrumb.Item>
-    </Breadcrumb>
-  );
+	const { breadList } = props;
+    return ( 
+    	<Breadcrumb>
+        {
+        	breadList.map((item,index) => (
+				<Breadcrumb.Item key={index}>{item.url ? <Link to={item.url}>{item.name}</Link> : item.name}</Breadcrumb.Item> 
+			))
+		}
+        </Breadcrumb>
+    );
 }
 
-export default Index;
+function mapStateToProps(state) {
+    return state.frame;
+}
+
+export default connect(mapStateToProps)(Index);
