@@ -107,6 +107,10 @@ dva组成：
 http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu
 1. Popping Out of Hidden Overflow | CSS-Tricks
 https://css-tricks.com/popping-hidden-overflow/
+1. webpack入门和实战(二)：全面理解和运用loader和plugins - 流浪的诗人 - 博客园
+http://www.cnblogs.com/wdlhao/p/5807157.html
+1. supervisor和forever npm插件
+1. https://c9.io/ | https://coding.net/ | 新浪SAE
 
 ## 问题记录
 1. 只能有一个根节点
@@ -116,6 +120,9 @@ https://css-tricks.com/popping-hidden-overflow/
 1. two children with the same key -> 双引号
 1. fetch默认不带cookie、ip+端口号转发 -> {credentials: 'include'}
 1. iterator key不能重复
+1. file-loader引起的html-webpack-plugin坑 - wonyun - 博客园
+http://www.cnblogs.com/wonyun/p/5950722.html
+https://github.com/webpack/html-loader
 
 ##### 相关链接
 - [Windows下使用Beyond Compare作为git的比对与合并工具 - Tek_Eternal - 开源中国社区](https://my.oschina.net/u/1010578/blog/348731)
